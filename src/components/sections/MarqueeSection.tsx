@@ -5,9 +5,9 @@ import { FadeIn } from '../ui/FadeIn';
 
 const videos = [
   "/vid3.mp4",
-  "/vid2.mp4",
+  "/vid4.mp4",
   "/vid1.mp4",
-  "/vid4.mp4"
+  "/vid2.mp4"
 ];
 
 const CarouselCard = ({ src, index, activeIndex, onClick, hasLanded }: { src: string, index: number, activeIndex: number, onClick: () => void, hasLanded: boolean }) => {
