@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root,
+  .main-wrapper {
+    margin: 0;
+    padding: 0;
+    background-color: #E4E4E4;
+    color: #FF4500;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .main-wrapper {
+    overflow-x: clip;
+    width: 100%;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6, .hero-heading {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-heading {
+    color: #111111;
+  }
+}
+
+/* ===== GLOBAL SPLASH ===== */
+.global-splash {
+  position: fixed; inset: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  animation: splashHide 0.3s ease forwards;
+  animation-delay: 1.35s;
+}
+.splash-row { display: flex; width: 100%; height: 50%; }
+.splash-box { width: 20%; height: 100%; background: #FF4500; }
+.splash-row-top .splash-box { animation: splashTop 1s cubic-bezier(0.96,-0.02,0.38,1.01) forwards; }
+.splash-row-bottom .splash-box { animation: splashBottom 1s cubic-bezier(0.96,-0.02,0.38,1.01) forwards; }
+.splash-box:nth-child(1) { animation-delay: 0s; }
+.splash-box:nth-child(2) { animation-delay: 0.05s; }
+.splash-box:nth-child(3) { animation-delay: 0.1s; }
+.splash-box:nth-child(4) { animation-delay: 0.15s; }
+.splash-box:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes splashTop { from { transform: translateY(0%); } to { transform: translateY(-100%); } }
+@keyframes splashBottom { from { transform: translateY(0%); } to { transform: translateY(100%); } }
+@keyframes splashHide { to { opacity: 0; visibility: hidden; } }
