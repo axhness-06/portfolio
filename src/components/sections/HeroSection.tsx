@@ -30,7 +30,7 @@ export const HeroSection = () => {
   return (
     <section className="h-screen flex flex-col overflow-x-clip relative">
       {/* Navbar */}
-      <FadeIn delay={0} y={-20} as="nav" className="flex justify-between px-6 md:px-10 pt-6 md:pt-8 text-[#111111] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] z-20">
+      <FadeIn delay={0} y={-20} as="nav" className="flex justify-between px-6 md:px-10 pt-6 md:pt-8 text-[#111111] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] relative z-40 pointer-events-auto">
         <RollingText href="#about" text="About" />
         <RollingText href="#projects" text="Projects" />
         <RollingText href="https://ig.me/m/studioashh" text="Contact" />
@@ -74,7 +74,7 @@ export const HeroSection = () => {
       </FadeIn>
 
       {/* Bottom bar */}
-      <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 pointer-events-auto">
+      <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-40 pointer-events-auto">
         <FadeIn delay={0.35} y={20} className="max-w-[160px] sm:max-w-[220px] md:max-w-[260px]">
           <p className="text-[#FF4500] font-light uppercase tracking-wide leading-snug" style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}>
             I build brands people actually stop scrolling for.
