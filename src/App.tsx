@@ -3,7 +3,7 @@ import { HeroSection } from './components/sections/HeroSection';
 import { MarqueeSection } from './components/sections/MarqueeSection';
 import { AboutSection } from './components/sections/AboutSection';
 import { ServicesSection } from './components/sections/ServicesSection';
-import { ProjectsSection } from './components/sections/ProjectsSection';
+import { WebDesignSection } from './components/sections/WebDesignSection';
 import { ShowcaseSection } from './components/sections/ShowcaseSection';
 import CursorGrid from './components/ui/CursorGrid';
 
@@ -14,7 +14,7 @@ function App() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (['creative', 'projects', 'showcase'].includes(entry.target.id)) {
+          if (['creative', 'showcase'].includes(entry.target.id)) {
             setCursorColor('#FFFFFF');
           } else {
             setCursorColor('#FF4500');
@@ -54,10 +54,10 @@ function App() {
       </div>
 
       <HeroSection />
+      <WebDesignSection />
       <MarqueeSection />
       <AboutSection />
       <ServicesSection />
-      <ProjectsSection />
       <ShowcaseSection />
     </main>
   );
