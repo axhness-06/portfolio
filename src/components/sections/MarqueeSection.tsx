@@ -107,6 +107,7 @@ const CarouselCard = ({ src, index, activeIndex, onClick, hasLanded }: { src: st
           className="w-full h-full object-cover"
           loop
           playsInline
+          preload="auto"
         />
       </div>
     </div>
