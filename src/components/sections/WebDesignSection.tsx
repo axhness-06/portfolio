@@ -86,6 +86,7 @@ const Card = ({ i, project, progress, range, targetScale }: CardProps) => {
               src={project.link} 
               className="w-full h-full border-0 pointer-events-none" 
               title={project.name} 
+              loading="eager"
             />
           </div>
           {/* Dark overlay for text legibility */}

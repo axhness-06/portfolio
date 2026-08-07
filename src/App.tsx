@@ -9,6 +9,7 @@ import CursorGrid from './components/ui/CursorGrid';
 
 function App() {
   const [cursorColor, setCursorColor] = useState('#FF4500');
+  const [hasEntered, setHasEntered] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -43,8 +44,15 @@ function App() {
         />
       </div>
 
+      {/* ENTER SCREEN OVERLAY */}
+      <div className={`enter-overlay ${hasEntered ? 'hidden' : ''}`}>
+        <button className="water-btn" onClick={() => setHasEntered(true)}>
+          + ENTER +
+        </button>
+      </div>
+
       {/* GLOBAL SPLASH */}
-      <div className="global-splash" id="splash">
+      <div className={`global-splash ${hasEntered ? 'is-entering' : ''}`} id="splash">
         <div className="splash-row splash-row-top">
           <div className="splash-box"></div><div className="splash-box"></div><div className="splash-box"></div><div className="splash-box"></div><div className="splash-box"></div>
         </div>
